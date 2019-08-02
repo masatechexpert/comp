@@ -20,7 +20,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html{redirect_to root_path}
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to events_url, notice: 'スケジュールは削除されました' }
       format.json { head :no_content }
     end
   end

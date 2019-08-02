@@ -1,15 +1,15 @@
 = form_with(model: event, local: true) do |f|
   .new-event
-    .new-event__name
-      %h1 スケジュール名
-      = f.text_field :name
-    .new-event__content
-      %h1 内容
-      = f.text_area :content
-    .new-event
+    .new-event__title
+      %h1 タイトル
+      = f.text_field :title
+    .new-event__description
+      %h1 説明
+      = f.text_area :description
+    .new-event__start_date
       %h1 開始時刻
       = f.datetime_select :start_date
-    .new-event
+    .new-event__end_date
       %h1 終了時刻
       = f.datetime_select :end_date
     .new-event__submit-btn
