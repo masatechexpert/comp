@@ -1,0 +1,16 @@
+= form_with(model: event, local: true) do |f|
+  .new-event
+    .new-event__name
+      %h1 スケジュール名
+      = f.text_field :name
+    .new-event__content
+      %h1 内容
+      = f.text_area :content
+    .new-event
+      %h1 開始時刻
+      = f.datetime_select :start_date
+    .new-event
+      %h1 終了時刻
+      = f.datetime_select :end_date
+    .new-event__submit-btn
+      = f.submit "スケジュールを作成"
