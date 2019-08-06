@@ -1,5 +1,5 @@
 %p#notice= notice
-%h1 Events
+%h1 イベント
 %table
   %thead
     %tr
@@ -15,9 +15,9 @@
         %td= event.description
         %td= event.start_date
         %td= event.end_date
-        %td= link_to 'Show', event
-        %td= link_to 'Edit', edit_event_path(event)
-        %td= link_to 'Destroy', event, method: :delete, data: { confirm: 'スケジュールを削除しますか?' }
+        %td= link_to '詳細', event
+        %td= link_to '編集', edit_event_path(event)
+        %td= link_to '削除', event, method: :delete, data: { confirm: 'スケジュールを削除しますか?' }
 %br/
 = link_to 'スケジュールを作成', new_event_path
 

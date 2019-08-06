@@ -20,7 +20,7 @@
 //= require_tree .
 
 
-$(function () {
+$(document).ready(function () {
   $('#calendar').fullCalendar({
     events: '/events.json',
     header: {
