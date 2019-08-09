@@ -12,5 +12,7 @@
     .new-event__end_date
       %h1 終了時刻
       = f.datetime_select :end_date
+    .new-event__user_id
+      = f.hidden_field :user_id, value: current_user.id
     .new-event__submit-btn
       = f.submit "スケジュールを作成"
