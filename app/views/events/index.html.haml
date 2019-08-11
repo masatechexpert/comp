@@ -1,4 +1,3 @@
-= render 'shared/header'
 .task
   %table
     %thead
@@ -13,12 +12,12 @@
         %tr
           %td= event.title
           %td= event.description
-          %td= event.start_date
-          %td= event.end_date
+          %td= event.start_date.strftime("%Y-%m-%d %H:%M:%S")
+          %td= event.end_date.strftime("%Y-%m-%d %H:%M:%S")
           %td= link_to '詳細', event
           %td= link_to '編集', edit_event_path(event)
           %td= link_to '削除', event, method: :delete, data: { confirm: 'スケジュールを削除しますか?' }
-  %br/
   = link_to 'スケジュールを作成', new_event_path
 
-#calendar
+.calendar
+  #calendar
