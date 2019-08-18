@@ -1,6 +1,6 @@
 .header
   .header__title
-    %h1 Schedule
+    = link_to "Schedule", root_path, class: 'title'
   - if user_signed_in?
     .header__logout
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
