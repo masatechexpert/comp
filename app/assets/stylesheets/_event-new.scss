@@ -18,3 +18,105 @@
     }
   }
 }
+
+.new-event{
+  border-top: solid 5px #5989cf;
+  border-bottom: solid 5px #5989cf;
+  background: #cde4ff;
+  &__title{
+    margin: 20px;
+    h1{
+      margin-bottom: 10px;
+    }
+  }
+  &__description{
+    margin: 20px;
+    h1{
+      margin-bottom: 10px;
+    }
+    .description-form{
+      width: 100%;
+      resize: vertical;
+      text-indent: 0.7rem;
+      font-size: 20px;
+    }
+  }
+  &__start_date{
+    margin: 20px;
+    display:  inline-block;
+    h1{
+      margin-bottom: 10px;
+      display:  inline-block;
+      margin-right: 5px;
+    }
+    .start_date-form{
+      height: 35px;
+      margin-right: 5px;
+    }
+    #event_start_date_4i{
+      margin-left: 5px;
+    }
+    #event_start_date_5i{
+      margin-left: 5px;
+    }
+  }
+  &__end_date{
+    margin: 20px;
+    display:  inline-block;
+    h1{
+      margin-bottom: 10px;
+      display:  inline-block;
+      margin-right: 5px;
+    }
+    .end_date-form{
+      height: 35px;
+      margin-right: 5px;
+    }
+    #event_end_date_4i{
+      margin-left: 5px;
+    }
+    #event_end_date_5i{
+      margin-left: 5px;
+    }
+  }
+  &__submit-btn{
+    background-color: rgb(43, 43, 128);
+    border-radius: 10px;
+    height: 40px;
+    width: 200px;
+    margin: 10px auto 10px auto;
+    .new-btn{
+    color: #ffffff;
+    background-color: rgb(43, 43, 128);
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    right: 30px;
+    text-align: center;
+    line-height: 2.5em;
+    cursor: pointer;
+    }
+  }
+  &__back{
+    background-color: rgb(43, 43, 128);
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    margin: 10px auto 10px auto;
+    .back-btn{
+      color: #ffffff;
+      background-color: rgb(43, 43, 128);
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      right: 30px;
+      text-align: center;
+      line-height: 2.5em;
+      cursor: pointer;
+    }
+  }
+}
