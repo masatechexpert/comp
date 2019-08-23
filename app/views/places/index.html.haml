@@ -1,27 +1,11 @@
-%h1 Listing places
-
-%table
-  %thead
-    %tr
-      %th Name
-      %th Description
-      %th Latitude
-      %th Longitude
-      %th
-      %th
-      %th
-
-  %tbody
-    - @places.each do |place|
-      %tr
-        %td= place.name
-        %td= place.description
-        %td= place.latitude
-        %td= place.longitude
-        %td= link_to 'Show', place
-        %td= link_to 'Edit', edit_place_path(place)
-        %td= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
 = link_to 'New Place', new_place_path
+
+#map{:style => "width: 100%; height: 460px;"}
+
+:javascript
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers(#{raw @hash.to_json});
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
