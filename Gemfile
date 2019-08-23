@@ -73,3 +73,4 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem "nokogiri", ">= 1.10.4"
