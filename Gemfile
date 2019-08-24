@@ -73,3 +73,5 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem "gmaps4rails"
+gem "geocoder"
