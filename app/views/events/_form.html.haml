@@ -12,6 +12,9 @@
     .new-event__end_date
       %h1 終了時刻
       = f.datetime_select :end_date, {}, class: "end_date-form"
+    .new-event__address
+      %h1 場所
+      = f.text_field :address, class: "address-form"
     .new-event__user_id
       = f.hidden_field :user_id, value: current_user.id
     .new-event__submit-btn

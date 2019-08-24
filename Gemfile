@@ -74,3 +74,5 @@ gem 'kaminari'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem "nokogiri", ">= 1.10.4"
+gem "gmaps4rails"
+gem "geocoder"
