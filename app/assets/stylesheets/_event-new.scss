@@ -52,6 +52,7 @@
     .start_date-form{
       height: 35px;
       margin-right: 5px;
+      background-color: #ffffff;
     }
     #event_start_date_4i{
       margin-left: 5px;
@@ -71,6 +72,7 @@
     .end_date-form{
       height: 35px;
       margin-right: 5px;
+      background-color: #ffffff;
     }
     #event_end_date_4i{
       margin-left: 5px;
@@ -81,10 +83,28 @@
   }
   &__address{
     margin: 20px;
-    h1{
-      margin-bottom: 10px;
-      display:  inline-block;
-      margin-right: 5px;
+    &__prefecture{
+      margin-top: 20px;
+      h2{
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .address-form__prefecture{
+        display: inline-block;
+        background-color: #ffffff;
+        height: 40px;
+        width: 150px;
+      }
+    }
+    &__city{
+      margin-top: 20px;
+      h3{
+        display: inline-block;
+        margin-right: 25px;
+      }
+      .address-form__city{
+        display: inline-block;
+      }
     }
   }
   &__submit-btn{

@@ -14,7 +14,12 @@
       = f.datetime_select :end_date, {}, class: "end_date-form"
     .new-event__address
       %h1 場所
-      = f.text_field :address, class: "address-form"
+      .new-event__address__prefecture
+        %h2 都道府県
+        = f.select :address, Address.all.map{|t| [t.name]}, {prompt: "---"}, class: "address-form__prefecture"
+      .new-event__address__city
+        %h3 市町村
+        = f.text_field :address, class: "address-form__city"
     .new-event__user_id
       = f.hidden_field :user_id, value: current_user.id
     .new-event__submit-btn
