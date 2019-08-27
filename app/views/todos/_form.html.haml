@@ -1,0 +1,8 @@
+= form_with(model: todo, local: true) do |f|
+  .new-event
+    .new-event__title
+      %h1 タイトル
+      = f.text_field :title
+    .new-event__description
+      %h1 説明
+      = f.text_area :description, class: "description-form"
