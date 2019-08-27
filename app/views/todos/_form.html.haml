@@ -1,8 +1,14 @@
 = form_with(model: todo, local: true) do |f|
-  .new-event
-    .new-event__title
+  .new-todo
+    .new-todo__title
       %h1 タイトル
       = f.text_field :title
-    .new-event__description
+    .new-todo__description
       %h1 説明
       = f.text_area :description, class: "description-form"
+    .new-todo__user_id
+      = f.hidden_field :user_id, value: current_user.id
+    .new-todo__submit-btn
+      = f.submit "スケジュールを作成", class: "new-btn"
+    .new-todo__back
+      = link_to '戻る', todos_path, class: "back-btn"
