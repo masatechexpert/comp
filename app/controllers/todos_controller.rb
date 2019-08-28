@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: [:index, :show, :edit, :update, :destroy]
+  before_action :set_todo, only: [:show, :edit, :update, :destroy]
 
   def index
     @todos = current_user.todos.all
@@ -33,8 +33,9 @@ class TodosController < ApplicationController
 
   private
     def set_todo
-        @todo = current_user.todos.find(params[:id])
-      end
+      @todo = Todo.find(params[:id])
+    end
+
       
     def todo_params
       params.require(:todo).permit(:title, :description, :user_id)

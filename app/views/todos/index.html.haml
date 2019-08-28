@@ -1,9 +1,10 @@
-.todo
-- @todos.each do |todo|
-  .todo__title
-    = todo.title
-  .todo__description
-    = todo.description
-  .todo_image
-    = image_tag('memo.png')
-  = link_to "削除する", "todos#destroy" , method: :delete, class: "delete-btn"
+.board
+  - @todos.each do |todo|
+    .todo__image
+      = image_tag'memo.png'
+      .todo__image__title
+        = todo.title
+      .todo__image__description
+        = todo.description
+      .todo__image__destroy
+        = link_to '削除', todo, method: :delete, data: { confirm: 'ToDoを消しますか？' }
