@@ -2,7 +2,9 @@
   .event-new__btn
     = link_to 'スケジュールを作成', new_event_path, class: "new-btn"
   .todo-new__btn
-    = link_to 'スケジュールを作成', new_todo_path, class: "new-btn"
+    = link_to 'ToDoリストを作成', new_todo_path, class: "new-btn"
+  .todo-index__btn
+    = link_to 'ToDoリスト', '/todos/', class: "index-btn"
 
 .calendar
   #calendar

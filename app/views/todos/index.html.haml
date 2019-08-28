@@ -4,3 +4,6 @@
     = todo.title
   .todo__description
     = todo.description
+  .todo_image
+    = image_tag('memo.png')
+  = link_to "削除する", "todos#destroy" , method: :delete, class: "delete-btn"

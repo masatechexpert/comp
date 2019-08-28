@@ -1,8 +1,12 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: [:show, :edit, :update, :destroy]
+  before_action :set_todo, only: [:index, :show, :edit, :update, :destroy]
 
   def index
     @todos = current_user.todos.all
+  end
+
+  def show
+    @todos = Todo.find(params.require(:id))
   end
 
   def new

@@ -9,6 +9,6 @@
     .new-todo__user_id
       = f.hidden_field :user_id, value: current_user.id
     .new-todo__submit-btn
-      = f.submit "スケジュールを作成", class: "new-btn"
+      = f.submit "ToDoリストを作成", class: "new-btn"
     .new-todo__back
       = link_to '戻る', todos_path, class: "back-btn"
