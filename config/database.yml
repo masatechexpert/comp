@@ -27,9 +27,9 @@ test:
 
 production:
   adapter: mysql2
-  encoding: utf8
-  database: comp_development
+  endocing: utf8
   pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  database: <%= ENV['DB_NAME'] %> 
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
