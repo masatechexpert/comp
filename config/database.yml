@@ -26,10 +26,10 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: mysql2
-  endocing: utf8
-  pool: 5
-  database: <%= ENV['DB_NAME'] %> 
+  adapter:  mysql2
+  encoding: utf8
+  database: <%= ENV['DB_NAME'] %>
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
+  host:     <%= ENV['DB_HOSTNAME'] %>
+  port:     <%= ENV['DB_PORT'] %>
