@@ -26,8 +26,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  url: <%= ENV['DATABASE_URL'] %>
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: [スキーマ名]
+  username: [ユーザ名]
+  password: <%= ENV['DATABASE_PASSWORD'] %>
