@@ -77,3 +77,4 @@ gem "nokogiri", ">= 1.10.4"
 gem "gmaps4rails"
 gem "geocoder"
 gem 'active_hash'
+gem 'dotenv-rails'
