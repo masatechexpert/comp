@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :events
   has_many :todos
+  has_many :groups, through: :group_users
+  has_many :group_users
 end
