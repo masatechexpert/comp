@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'events#index'
   resources :events
-  resources :users, only: [:edit, :update]
+  resources :users, only: [:index, :edit, :update]
   resources :todos
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 end
 =======
@@ -12,3 +13,8 @@ end
   end
 end
 >>>>>>> Stashed changes
+=======
+  resources :groups, only: [:new, :create, :edit, :update] do
+  end
+end
+>>>>>>> group

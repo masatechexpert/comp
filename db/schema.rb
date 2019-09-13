@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 2019_08_27_130512) do
 =======
@@ -26,6 +27,9 @@ ActiveRecord::Schema.define(version: 2019_09_13_045734) do
     t.index ["user_id"], name: "index_bulletin_boards_on_user_id"
   end
 >>>>>>> Stashed changes
+=======
+ActiveRecord::Schema.define(version: 2019_09_09_154846) do
+>>>>>>> group
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -38,6 +42,21 @@ ActiveRecord::Schema.define(version: 2019_09_13_045734) do
     t.string "address"
     t.float "latitude"
     t.float "longitude"
+  end
+
+  create_table "group_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_group_users_on_group_id"
+    t.index ["user_id"], name: "index_group_users_on_user_id"
+  end
+
+  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -71,6 +90,7 @@ ActiveRecord::Schema.define(version: 2019_09_13_045734) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
   add_foreign_key "bulletin_boards", "groups"
@@ -78,4 +98,8 @@ ActiveRecord::Schema.define(version: 2019_09_13_045734) do
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
 >>>>>>> Stashed changes
+=======
+  add_foreign_key "group_users", "groups"
+  add_foreign_key "group_users", "users"
+>>>>>>> group
 end

@@ -5,6 +5,17 @@
     = link_to 'ToDoリストを作成', new_todo_path, class: "new-btn"
   .todo-index__btn
     = link_to 'ToDoリスト', '/todos/', class: "index-btn"
+  .groups-new__btn
+    = link_to 'グループを作成', new_group_path, class: "groups-btn"
 
 .calendar
   #calendar
+
+.groups
+  .group
+    - current_user.groups.each do |group|
+      = link_to '#' do
+        .group__name
+          = group.name
+        .group__message
+          メッセージはまだありません。
