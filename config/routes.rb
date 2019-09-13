@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :edit, :update]
   resources :todos
   resources :groups, only: [:new, :create, :edit, :update] do
+    resources :bulletin_boards, only: [:index, :create]
   end
 end
