@@ -78,3 +78,4 @@ gem "gmaps4rails"
 gem "geocoder"
 gem 'active_hash'
 gem 'dotenv-rails'
+gem 'material_icons'

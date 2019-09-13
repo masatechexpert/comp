@@ -13,6 +13,7 @@
  *= require_self
  *= require fullcalendar
  *= require_tree .
+ *= require material_icons
  */
 
 @import './reset';
@@ -24,3 +25,4 @@
 @import 'todo-index';
 @import 'groups';
 @import 'messages';
+@import 'footer';
