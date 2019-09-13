@@ -1,0 +1,11 @@
+.bulletin_board
+  .upper-bulletin_board
+    .upper-bulletin_board__user-name
+      = bulletin_board.user.name
+    .upper-bulletin_board__date
+      = bulletin_board.created_at.strftime("%Y/%m/%d %H:%M")
+  .lower-bulletin_board
+    - if bulletin_board.message.present?
+      %p.lower-bulletin_board__content
+        = bulletin_board.message
+    = image_tag bulletin_board.image.url, class: 'lower-bulletin_board__image' if bulletin_board.image.present?

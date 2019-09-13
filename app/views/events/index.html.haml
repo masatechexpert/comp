@@ -8,14 +8,13 @@
   .groups-new__btn
     = link_to 'グループを作成', new_group_path, class: "groups-btn"
 
+
 .calendar
   #calendar
 
 .groups
   .group
     - current_user.groups.each do |group|
-      = link_to '#' do
+      = link_to group_bulletin_boards_path(group) do
         .group__name
           = group.name
-        .group__message
-          メッセージはまだありません。
