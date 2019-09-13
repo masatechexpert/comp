@@ -10,8 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2019_09_13_175049) do
 
-ActiveRecord::Schema.define(version: 2019_09_13_070515) do
+  create_table "bulletin_boards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "message"
+    t.string "image"
+    t.bigint "group_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_bulletin_boards_on_group_id"
+    t.index ["user_id"], name: "index_bulletin_boards_on_user_id"
+  end
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -40,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_09_13_070515) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
     t.string "image"
@@ -77,13 +88,14 @@ ActiveRecord::Schema.define(version: 2019_09_13_070515) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "index_users_on_name"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-
-
+  add_foreign_key "bulletin_boards", "groups"
+  add_foreign_key "bulletin_boards", "users"
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
   add_foreign_key "messages", "groups"

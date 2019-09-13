@@ -1,17 +1,23 @@
 .footer{
   position: fixed;
   width: 100%;
-  height: 120px;
+  height: 85px;
   background-color: #1e1e1e;
   bottom:0px;
   z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-top: 10px;
+  h1{
+    color: white;
+  }
   &__home{
     display: inline-block;
-    margin: 10px;
     .material-icons{
       color: white;
       font-size: 50px;
-      
     }
   }
   &__group{
@@ -22,6 +28,13 @@
     }
   }
   &__todo{
+    display: inline-block;
+    .material-icons{
+      color: white;
+      font-size: 50px;
+    }
+  }
+  &__todo-new{
     display: inline-block;
     .material-icons{
       color: white;

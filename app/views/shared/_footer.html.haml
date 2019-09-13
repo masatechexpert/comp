@@ -2,9 +2,20 @@
   .footer__home
     = link_to root_path do
       %i.material-icons home
+      %h1 ホーム
   .footer__group
-    %i.material-icons group
+    = link_to new_group_path do
+      %i.material-icons group_add
+      %h1 グループを作成
   .footer__todo
-    %i.material-icons calendar_today
+    = link_to '/todos/' do
+      %i.material-icons bookmark_border
+      %h1 ToDoリスト
+  .footer__todo-new
+    = link_to new_todo_path do
+      %i.material-icons note_add
+      %h1 ToDoを作成
   .footer__event
-    %i.material-icons schedule
+    = link_to new_event_path do
+      %i.material-icons schedule
+      %h1 スケジュールを作成
