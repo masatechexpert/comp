@@ -4,17 +4,7 @@ Rails.application.routes.draw do
   resources :events
   resources :users, only: [:index, :edit, :update]
   resources :todos
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-end
-=======
   resources :groups, only: [:new, :create, :edit, :update] do
-    resources :bulletin_boards, only: [:index, :create]
+    resources :messages, only: [:index, :create]
   end
 end
->>>>>>> Stashed changes
-=======
-  resources :groups, only: [:new, :create, :edit, :update] do
-  end
-end
->>>>>>> group

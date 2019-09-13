@@ -10,26 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-ActiveRecord::Schema.define(version: 2019_08_27_130512) do
-=======
-ActiveRecord::Schema.define(version: 2019_09_13_045734) do
 
-  create_table "bulletin_boards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "message"
-    t.string "image"
-    t.bigint "group_id"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_bulletin_boards_on_group_id"
-    t.index ["user_id"], name: "index_bulletin_boards_on_user_id"
-  end
->>>>>>> Stashed changes
-=======
-ActiveRecord::Schema.define(version: 2019_09_09_154846) do
->>>>>>> group
+ActiveRecord::Schema.define(version: 2019_09_13_070515) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -57,6 +39,16 @@ ActiveRecord::Schema.define(version: 2019_09_09_154846) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "content"
+    t.string "image"
+    t.bigint "group_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_messages_on_group_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -90,16 +82,10 @@ ActiveRecord::Schema.define(version: 2019_09_09_154846) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-  add_foreign_key "bulletin_boards", "groups"
-  add_foreign_key "bulletin_boards", "users"
+
+
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
->>>>>>> Stashed changes
-=======
-  add_foreign_key "group_users", "groups"
-  add_foreign_key "group_users", "users"
->>>>>>> group
+  add_foreign_key "messages", "groups"
+  add_foreign_key "messages", "users"
 end

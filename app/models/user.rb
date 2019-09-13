@@ -6,15 +6,7 @@ class User < ApplicationRecord
 
   has_many :events
   has_many :todos
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
   has_many :group_users
   has_many :groups, through: :group_users
-  has_many :bulletin_boards
->>>>>>> Stashed changes
-=======
-  has_many :group_users
-  has_many :groups, through: :group_users
->>>>>>> group
+  has_many :messages
 end
