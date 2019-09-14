@@ -8,6 +8,12 @@
       = link_to 'ToDoリスト', '/todos/', class: "index-btn"
     .groups-new__btn
       = link_to 'グループを作成', new_group_path, class: "groups-btn"
+    .group
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
 
   .calendar
     #calendar
+

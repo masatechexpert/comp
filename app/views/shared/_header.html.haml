@@ -9,13 +9,6 @@
       = link_to "アカウント作成", new_registration_path(resource_name), class: 'btn'
     .header__sign-in
       = link_to "ログイン", new_session_path(resource_name), class: 'btn'
-  .header__groups
-  - if user_signed_in?
-    - current_user.groups.each do |group|
-      .header__groups__link
-        = link_to group_messages_path(group), class: "group-link" do
-          .name
-            = group.name
   .header__user
   - if user_signed_in?
     .header__avatar

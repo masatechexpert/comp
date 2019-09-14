@@ -1,5 +1,6 @@
 = form_with(model: group, local: true) do |f|
   .group-name
     = f.text_field :name, class: 'group-name__form', placeholder: 'グループ名を入力してください'
+    = f.hidden_field :user_ids, value: current_user.id, multiple: true
   .group-new__submit
     = f.submit class: 'group-new__btn'
