@@ -1,11 +1,16 @@
 class UsersController < ApplicationController
 
+  def create
+    user = User.create!(user_params)
+    redirect_to root_path
+  end
+
   def edit
   end
 
   def update
-    if current_user.update(user_params)
-      redirect_to root_path
+    if @user.update(user_params) && @user.avatar.attach(params[:avatar])
+      redirect_to user_path(@user)
     else
       render :edit
     end
@@ -14,6 +19,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:name, :email, :avatar)
   end
 end

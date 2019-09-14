@@ -24,5 +24,10 @@
             = f.label :password_confirmation
           .account-page__inner__field__input
             = f.password_field :password_confirmation, autocomplete: "off"
+        .field
+          .field-label
+            = f.label :avatar
+          .field-input
+            = f.file_field :avatar
         .actions
           = f.submit "アカウントを作成", class: 'btn'
