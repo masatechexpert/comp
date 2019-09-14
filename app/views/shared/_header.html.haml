@@ -18,4 +18,4 @@
             = group.name
   .header__user
   - if user_signed_in?
-    = link_to current_user.name, edit_user_registration_path
+    = link_to current_user.name, edit_user_registration_path, class: "user-name"
