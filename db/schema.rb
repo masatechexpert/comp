@@ -12,17 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_09_13_175049) do
 
-  create_table "bulletin_boards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "message"
-    t.string "image"
-    t.bigint "group_id"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_bulletin_boards_on_group_id"
-    t.index ["user_id"], name: "index_bulletin_boards_on_user_id"
-  end
-
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -62,15 +51,6 @@ ActiveRecord::Schema.define(version: 2019_09_13_175049) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
-  create_table "places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.float "latitude"
-    t.float "longitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "todos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -94,8 +74,6 @@ ActiveRecord::Schema.define(version: 2019_09_13_175049) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bulletin_boards", "groups"
-  add_foreign_key "bulletin_boards", "users"
   add_foreign_key "group_users", "groups"
   add_foreign_key "group_users", "users"
   add_foreign_key "messages", "groups"
