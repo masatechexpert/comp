@@ -2,7 +2,7 @@
   .new-event
     .new-event__title
       %h1 タイトル
-      = f.text_field :title
+      = f.text_field :title, autocomplete: 'off'
     .new-event__description
       %h1 説明
       = f.text_area :description, class: "description-form"
