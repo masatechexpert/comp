@@ -12,6 +12,7 @@
   padding-top: 10px;
   h1{
     color: white;
+    
   }
   &__home{
     display: inline-block;
@@ -48,4 +49,8 @@
       font-size: 50px;
     }
   }
+}
+
+a{
+  text-decoration: none;
 }
