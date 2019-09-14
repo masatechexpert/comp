@@ -1,11 +1,14 @@
-.message
-  .upper-message
-    .upper-message__user-name
+.messages2
+  .messages2__index
+    .messages2__index__avatar
+      - if current_user.avatar?
+        = image_tag current_user.avatar.to_s
+      - else
+        = image_tag "no_avatar.png"
+    .messages2__index__name
       = message.user.name
-    .upper-message__date
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
-  .lower-message
-    - if message.content.present?
-      %p.lower-message__content
+    .messages2__index__date
+      = message.created_at.strftime("%H:%M")
+    .messages2__index__content
+      - if message.content.present?
         = message.content
-    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
