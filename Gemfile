@@ -79,3 +79,5 @@ gem "geocoder"
 gem 'active_hash'
 gem 'dotenv-rails'
 gem 'material_icons'
+gem 'carrierwave'
+gem 'rmagick'
