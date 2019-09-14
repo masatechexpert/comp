@@ -9,7 +9,8 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
     @group.users << current_user
-    
+    @users = User.all
+    @groups = Group.where(admin_user_id: 1)
   end
 
   def create
@@ -31,11 +32,15 @@ class GroupsController < ApplicationController
 
   private
   def group_params
-    params.require(:group).permit(:name, { :user_ids => [] })
+    params.require(:group).permit(:name, :admin_user_id, { :user_ids => [] })
   end
 
    def set_group
     @group = Group.find(params[:id])
+  end
+
+  def add_user_to_group
+    AddUserToGroup.create(user_id: params[:user_id], group_id: params[:group_id])
   end
 
 end

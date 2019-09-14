@@ -1,3 +1,10 @@
 .group-new
   %h1 グループを作成
   = render 'form', { group: @group }
+
+.groups
+  .group
+    - current_user.groups.each do |group|
+      = link_to '#' do
+        .group__name
+          = group.name

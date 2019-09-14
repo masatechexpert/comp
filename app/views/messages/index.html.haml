@@ -2,7 +2,7 @@
   .message
     .message-form
       .message-form__text
-        = f.text_field :content, class: 'form__message', placeholder: 'メッセージを入力してください'
+        = f.text_field :content, class: 'form__message', placeholder: 'メッセージを入力してください', autocomplete: 'off'
       .message-form__submit
         = f.submit '送信', class: 'form__submit'
 

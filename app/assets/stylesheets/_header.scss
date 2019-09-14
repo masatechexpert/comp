@@ -101,18 +101,18 @@
 }
 
 
-img{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-  vertical-align: middle;
-}
+
 
 .header__avatar{
   display: inline-block;
   margin: 15px;
-
+  img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+  }
 }
 .header__name{
   display: inline-block;
