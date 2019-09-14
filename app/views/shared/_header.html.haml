@@ -18,4 +18,10 @@
             = group.name
   .header__user
   - if user_signed_in?
-    = link_to current_user.name, edit_user_registration_path, class: "user-name"
+    .header__avatar
+      - if current_user.avatar?
+        = image_tag current_user.avatar.to_s
+      - else
+        = image_tag "no_avatar.png"
+    .header__name
+      = link_to current_user.name, edit_user_registration_path, class: "user-name"
