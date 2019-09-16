@@ -18,9 +18,7 @@
 }
 
 .board{
-  background-image: url("board.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin: 90px 0 100px 0;
   .todo__image{
     margin: 80px 80px 0 80px;
     position: relative;
@@ -35,13 +33,14 @@
       top: 100px;
       left: 25px;
       font-size: 20px;
+      word-wrap: break-word;
+      margin: 0 220px 0 25px;
     }
     &__destroy{
       position: absolute;
       top: 300px;
       left: 35px;
       font-size: 20px;
-      
     }
   }
 }
