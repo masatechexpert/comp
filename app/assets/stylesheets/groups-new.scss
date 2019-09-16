@@ -1,0 +1,43 @@
+.group-wrap{
+  background: linear-gradient(#05FBFF, #1E00FF);
+  height: 680px;
+  width: 100%;
+  padding: 80px 0 80px 0;
+  .group-new{
+    height: 250px;
+    width: 400px;
+    background: radial-gradient(#F2B9A1, #EA6264);
+    color: #fff;
+    padding: 25px;
+    box-shadow: 15px 15px 3px rgba(0,0,0,.2);
+    border-radius: 20px;
+    text-align: center;
+    margin: 100px auto;
+    &__text{
+    }
+    &__name{
+      .group-name__form{
+        width: 250px;
+        height: 30px;
+        border-radius: 20px;
+        margin: 20px;
+      }
+    }
+    &__member{
+      label{
+        margin-right: 10px;
+      }
+    }
+    &__submit{
+      .group-new__btn{
+        background: linear-gradient(-135deg, #E4A972, #9941D8);
+        color: #fff;
+        cursor: pointer;
+        border-radius: 20px;
+        margin-top: 80px;
+        width: 200px;
+        height: 50px;
+      }
+    }
+  }
+}

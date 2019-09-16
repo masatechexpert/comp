@@ -1,9 +1,11 @@
-.group-new
-  %h1 グループを作成
-  = render 'form', { group: @group }
+.group-wrap
+  .group-new
+    .group-new_text
+      %h1 グループを作成
+    = render 'form', { group: @group }
 
-.group
-  - current_user.groups.each do |group|
-    = link_to group_messages_path(group) do
-      .group__name
-        = group.name
+-# .group
+-#   - current_user.groups.each do |group|
+-#     = link_to group_messages_path(group) do
+-#       .group__name
+-#         = group.name

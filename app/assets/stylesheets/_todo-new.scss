@@ -1,21 +1,40 @@
 .todo-new{
-  margin: 100px;
-  &__btn{
-    background-color: rgb(43, 43, 128);
-    border-radius: 10px;
-    height: 40px;
-    width: 200px;
-    margin: 20px;
-    display: inline-block;
-    .new-btn{
-      color: #ffffff;
-      text-decoration: none;
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      right: 30px;
-      text-align: center;
-      line-height: 2.5em;
+   background: linear-gradient(#05FBFF, #1E00FF);
+    height: 680px;
+    width: 100%;
+    padding: 80px 0 80px 0;
+  .new-todo{
+    height: 300px;
+    width: 500px;
+    background: radial-gradient(#F2B9A1, #EA6264);
+    color: #fff;
+    padding: 25px;
+    box-shadow: 15px 15px 3px rgba(0,0,0,.2);
+    border-radius: 20px;
+    text-align: center;
+    margin: 100px auto;
+    &__title{
+
+    }
+    &__description{
+     .description-form{
+       height: 120px;
+       width: 400px;
+     }
+    }
+    &__user_id{
+
+    }
+    &__submit-btn{
+      .new-btn{
+        background: linear-gradient(-135deg, #E4A972, #9941D8);
+        color: #fff;
+        cursor: pointer;
+        border-radius: 20px;
+        width: 200px;
+        height: 50px;
+        margin-top: 50px; 
+      }
     }
   }
 }
