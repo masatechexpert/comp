@@ -1,14 +1,31 @@
-.messages2
-  .messages2__index
-    .messages2__index__avatar
-      - if current_user.avatar?
-        = image_tag current_user.avatar.to_s
-      - else
-        = image_tag "no_avatar.png"
-    .messages2__index__name
-      = message.user.name
-    .messages2__index__date
-      = message.created_at.strftime("%H:%M")
-    .messages2__index__content
-      - if message.content.present?
-        = message.content
+.messages
+- if current_user.id == message.user_id
+  .messages2
+    .messages2__index
+      .messages2__index__avatar
+        - if current_user.avatar?
+          = image_tag current_user.avatar.to_s
+        - else
+          = image_tag "no_avatar.png"
+      .messages2__index__name
+        = message.user.name
+      .messages2__index__date
+        = message.created_at.strftime("%H:%M")
+      .messages2__index__content
+        - if message.content.present?
+          = message.content
+- else
+  .messages3
+    .messages3__index
+      .messages3__index__avatar
+        - if current_user.avatar?
+          = image_tag current_user.avatar.to_s
+        - else
+          = image_tag "no_avatar.png"
+      .messages3__index__name
+        = message.user.name
+      .messages3__index__date
+        = message.created_at.strftime("%H:%M")
+      .messages3__index__content
+        - if message.content.present?
+          = message.content

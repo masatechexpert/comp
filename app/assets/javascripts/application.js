@@ -28,7 +28,9 @@ $(document).ready(function () {
       left: 'prev,next today',
       center: 'title',
       right: 'month,agendaWeek,agendaDay'
-    }
+    },
+    eventColor: 'rgb(43, 43, 128)',
+    eventTextColor: 'white',
   })
   function eventCalendar() {
     return $('#calendar').fullCalendar({});
