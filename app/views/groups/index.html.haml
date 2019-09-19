@@ -1,5 +1,6 @@
-.group
-  - current_user.groups.each do |group|
-    = link_to group_messages_path(group) do
-      .group__name
-        = group.name
+.wrap2
+  .group
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .group__name
+          = group.name

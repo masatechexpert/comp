@@ -1,0 +1,14 @@
+.wrap2{
+  background: linear-gradient(#05FBFF, #1E00FF);
+  height: 1000px;
+  width: 100%;
+  margin: 0;
+  padding: 100px;
+  .group{
+
+    &__name{
+      color: white;
+      font-size: 30px;
+    }
+  }
+}

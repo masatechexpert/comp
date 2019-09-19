@@ -1,3 +1,5 @@
-.group-edit
-  %h1 チャットグループ編集
-  = render partial: 'form', locals: { group: @group }
+.group-wrap
+  .group-new
+    .group-new_text
+      %h1 チャットグループ編集
+    = render partial: 'form', locals: { group: @group }
