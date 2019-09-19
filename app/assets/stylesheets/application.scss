@@ -29,3 +29,9 @@
 @import 'groups-new';
 @import 'groups-edit';
 @import 'groups-index';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}

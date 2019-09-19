@@ -1,10 +1,9 @@
 .todo-new{
    background: linear-gradient(#05FBFF, #1E00FF);
-    height: 680px;
+    height: 100%;
     width: 100%;
     padding: 80px 0 80px 0;
   .new-todo{
-    height: 300px;
     width: 500px;
     background: radial-gradient(#F2B9A1, #EA6264);
     color: #fff;
@@ -19,7 +18,10 @@
     &__description{
      .description-form{
        height: 120px;
-       width: 400px;
+       width: 100%;
+      resize: vertical;
+      text-indent: 0.7rem;
+      font-size: 20px;
      }
     }
     &__user_id{

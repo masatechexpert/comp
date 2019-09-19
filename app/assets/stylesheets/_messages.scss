@@ -48,10 +48,6 @@
   background-image: url(/assets/sky.jpg);
 }
 
-.wrap{
-  margin: 100px 50px 200px 20px;
-  
-}
 .messages2{
   text-align: right;
   position: relative;
@@ -169,3 +165,9 @@
     background: #fff0c6;
     border-radius: 50%;
   }
+
+.message-wrap{
+  background: linear-gradient(#05FBFF, #1E00FF);
+  padding: 50px 30px 150px 30px;
+  min-height: 100%;
+}

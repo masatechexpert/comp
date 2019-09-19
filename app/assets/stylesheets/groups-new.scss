@@ -1,10 +1,8 @@
 .group-wrap{
   background: linear-gradient(#05FBFF, #1E00FF);
-  height: 680px;
-  width: 100%;
-  padding: 80px 0 80px 0;
+  height: 100%;
+  padding: 150px 0 0 0;
   .group-new{
-    height: 250px;
     width: 400px;
     background: radial-gradient(#F2B9A1, #EA6264);
     color: #fff;
@@ -12,7 +10,7 @@
     box-shadow: 15px 15px 3px rgba(0,0,0,.2);
     border-radius: 20px;
     text-align: center;
-    margin: 100px auto;
+    margin: auto;
     &__text{
     }
     &__name{
