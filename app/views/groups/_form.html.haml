@@ -4,6 +4,6 @@
     = f.hidden_field :user_ids, value: current_user.id, multiple: true
     = f.hidden_field :admin_user_id, value: current_user.id
   .group-new__member
-    = f.collection_check_boxes :user_ids, User.all, :id, :name
+    = f.collection_check_boxes :user_ids, User.where.not(id: current_user.id), :id, :name
   .group-new__submit
     = f.submit class: 'group-new__btn'
