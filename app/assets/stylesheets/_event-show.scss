@@ -1,54 +1,62 @@
-.event-show{
-  margin: 80px 0 0 0;
-  padding: 8px 19px;
-  color: #2c2c2f;
-  background: #cde4ff;
-  border-top: solid 5px #5989cf;
-  border-bottom: solid 5px #5989cf;
-  &__title{
-    background-color: rgb(36, 36, 136);
-    color: #ffffff;
-    height: 50px;
-    text-align: center;
-    line-height: 3.0rem;
-    font-size: 30px;
-  }
-  &__description{
-    background-color: #ffffff;
-    word-wrap: break-word;
-    padding: 20px;
-    font-size: 20px;
-    text-indent: 0.7rem;
-  }
-  &__start_date{
-    display:  inline-block;
-    margin: 10px 20px 0 10px;
-    color: rgb(90, 90, 90);
-  }
-  &__end_date{
-    display:  inline-block;
-    color: rgb(90, 90, 90);
-  }
-  &__delete{
-    background-color: rgb(153, 24, 24);
-    border-radius: 10px;
-    height: 40px;
-    width: 200px;
-    margin: auto;
-    display: block;
-    .delete-btn{
+.event-wrap{
+  padding: 100px 0 100px 0;
+  background: linear-gradient(#05FBFF, #1E00FF);
+  .event-show{
+    padding: 8px 19px;
+    color: #2c2c2f;
+    background: radial-gradient(#F2B9A1, #EA6264);
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    max-width: 600px;
+    &__title{
       color: #ffffff;
-      text-decoration: none;
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      right: 30px;
+      height: 50px;
       text-align: center;
-      line-height: 2.5em;
+      line-height: 3.0rem;
+      font-size: 30px;
+    }
+    &__description{
+      background-color: #ffffff;
+      word-wrap: break-word;
+      padding: 20px;
+      font-size: 20px;
+      text-indent: 0.7rem;
+      border-radius: 20px;
+    }
+    &__start_date{
+      display:  inline-block;
+      margin: 10px 20px 0 10px;
+      color: rgb(90, 90, 90);
+    }
+    &__end_date{
+      display:  inline-block;
+      color: rgb(90, 90, 90);
+    }
+    &__delete{
+      background: linear-gradient(-135deg, #E4A972, #9941D8);
+      border-radius: 10px;
+      height: 40px;
+      width: 200px;
+      margin: auto;
+      display: block;
+      .delete-btn{
+        color: #ffffff;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        right: 30px;
+        text-align: center;
+        line-height: 2.5em;
+      }
     }
   }
-}
+  .google-map{
+    width: 100%;
 
-#map{
-  margin-bottom: 80px;
+    #map{
+      margin: auto;
+      max-width: 600px;
+    }
+  }
 }

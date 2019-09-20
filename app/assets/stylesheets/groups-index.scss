@@ -1,15 +1,16 @@
 .wrap2{
   background: linear-gradient(#05FBFF, #1E00FF);
   min-height: 100%;
-  margin: 0;
-  padding: 100px;
+  padding: 130px 0 130px 0;
+  min-width: 100%;
   .group{
+    margin: 100px;
     &__name{
       color: white;
       font-size: 25px;
       background: radial-gradient(#F2B9A1, #EA6264);
       display: inline;
-      margin: 20px;
+      margin: 20px 0 20px 0;
       padding: 5px;
       border-radius: 10px;
     }

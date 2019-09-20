@@ -1,6 +1,7 @@
 .event-new{
   background: linear-gradient(#05FBFF, #1E00FF);
-  padding: 150px;
+  padding: 150px 0 150px 0;
+  min-width: 100%;
   &__btn{
     background-color: rgb(43, 43, 128);
     border-radius: 10px;
@@ -19,13 +20,13 @@
     }
   }
   .new-event{
-    width: 700px;
+    max-width: 700px;
     background: radial-gradient(#F2B9A1, #EA6264);
     color: #fff;
     padding: 25px;
     box-shadow: 15px 15px 3px rgba(0,0,0,.2);
     border-radius: 20px;
-    margin: auto;
+    margin: 0 auto 0 auto;
     &__title{
       margin: 20px;
       h1{

@@ -1,30 +1,31 @@
-.event-show
-  .event-show__title
-    = @event.title
-  .event-show__description
-    = @event.description
-  .event-show__start_date
-    %h2 開始時間
-    = l @event.start_date, format: :short
-  .event-show__end_date
-    %h2 終了時間
-    = l @event.end_date, format: :short
-  .event-show__delete
-    = link_to "削除する", event_path(@event.id), method: :delete, class: "delete-btn"
+.event-wrap
+  .event-show
+    .event-show__title
+      = @event.title
+    .event-show__description
+      = @event.description
+    .event-show__start_date
+      %h2 開始時間
+      = l @event.start_date, format: :short
+    .event-show__end_date
+      %h2 終了時間
+      = l @event.end_date, format: :short
+    .event-show__delete
+      = link_to "削除する", event_path(@event.id), method: :delete, class: "delete-btn"
 
-.google-map
-  #map{:style => "width: 100%; height: 500px;"}
+  .google-map
+    #map{:style => "width: 80%; height: 400px;"}
 
-:javascript
-  handler = Gmaps.build('Google');
-  handler.buildMap({ provider: { scrollwheel: false }, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers([
-      {
-        "lat": #{@event.latitude},
-        "lng": #{@event.longitude},
-      }
-    ]);
-    handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
-    handler.getMap().setZoom(15);
-  });
+  :javascript
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: { scrollwheel: false }, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers([
+        {
+          "lat": #{@event.latitude},
+          "lng": #{@event.longitude},
+        }
+      ]);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+      handler.getMap().setZoom(15);
+    });
