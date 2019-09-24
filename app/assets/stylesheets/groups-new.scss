@@ -38,4 +38,16 @@
       }
     }
   }
+  .group-new__destroy{
+    background: linear-gradient(-135deg, #E4A972, #9941D8);
+    cursor: pointer;
+    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    margin: 10px auto; 
+    .group-delete{
+      color: #fff;
+      line-height: 3.0em;
+    }
+  }
 }

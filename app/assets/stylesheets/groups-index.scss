@@ -5,14 +5,27 @@
   min-width: 100%;
   .group{
     margin: 100px;
-    &__name{
-      color: white;
-      font-size: 25px;
-      background: radial-gradient(#F2B9A1, #EA6264);
-      display: inline;
-      margin: 20px 0 20px 0;
-      padding: 5px;
+    background: radial-gradient(#F2B9A1, #EA6264);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    &__title{
+      font-size: 27px;
+      background: radial-gradient(#F5515F, #A1051D);
+      color: #fff;
+      margin-bottom: 15px;
       border-radius: 10px;
+    }
+    &__index{
+      &__name{
+        color: white;
+        font-size: 25px;
+        display: inline;
+        margin: 20px 20px 20px 0;
+        padding: 5px;
+        border-radius: 10px;
+        background: linear-gradient(#fad961 ,#f76b1c);
+      }
     }
   }
 }

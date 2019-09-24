@@ -1,5 +1,7 @@
 .group-wrap
   .group-new
-    .group-new_text
+    .group-new__text
       %h1 グループ編集
     = render partial: 'form', locals: { group: @group }
+    .group-new__destroy
+      = link_to '削除', group_path(@group.id), method: :delete, data: { confirm: '削除しますか？' }, class: 'group-delete'
