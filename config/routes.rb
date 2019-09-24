@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :events
   resources :users, only: [:index, :edit, :update]
   resources :todos
-  resources :groups, only: [:index, :new, :create, :edit, :update] do
+  resources :groups, only: [:index, :new, :create, :edit, :update, :destroy] do
     resources :messages, only: [:index, :create]
   end
 end
