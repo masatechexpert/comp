@@ -19,17 +19,18 @@
 
 .wrap{
   background: linear-gradient(#05FBFF, #1E00FF);
-  margin: 0;
-  padding: 150px;
-  height: 100%;
+  min-height: 100%;
+  display: flex;
+  padding: 100px 0 0 100px;
   .board{
     .todo__image{
-      margin: 80px 80px 0 80px;
       position: relative;
+      float:left;
+      margin-right: 100px;
       &__title{
         position: absolute;
         top: 50px;
-        left: 160px;
+        left: 140px;
         font-size: 30px;
       }
       &__description{
