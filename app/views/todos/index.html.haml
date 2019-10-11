@@ -1,11 +1,11 @@
 .wrap
   .board
     - @todos.each do |todo|
-      .todo__image
+      .todo__image{data: {id: todo.id}}
         = image_tag'memo.png'
         .todo__image__title
           = todo.title
         .todo__image__description
           = todo.description
         .todo__image__destroy
-          = link_to '削除', todo, method: :delete, data: { confirm: '削除しますか？' }
+          = link_to '削除', todo, method: :delete, class: "delete_btn", data: {todo_id: todo.id}
