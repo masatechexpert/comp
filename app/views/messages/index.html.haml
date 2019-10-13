@@ -1,12 +1,12 @@
-= form_for [@group, @message] do |f|
+= form_with model: [@group, @message] do |f|
   - current_user.groups.each do |group|
     .message
       .message-form__wrap
         .message-form
           .message-form__group-name
             = link_to edit_group_path(@group.id) do
-              .name
-                = group.name
+              .edit-group
+                %i.material-icons group
           .message-form__text
             = f.text_field :content, class: 'form__message', placeholder: 'メッセージを入力', autocomplete: 'off'
           .message-form__submit

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_17_083743) do
+ActiveRecord::Schema.define(version: 2019_09_14_165238) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 2019_09_17_083743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "admin_user_id"
-    t.index ["name"], name: "index_groups_on_name"
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
