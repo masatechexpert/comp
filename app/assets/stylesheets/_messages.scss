@@ -10,6 +10,13 @@
     .message-form{
       &__group-name{
         display: inline-block;
+        .edit-group{
+          .material-icons{
+            color: white;
+            font-size: 60px;
+            vertical-align: middle;
+          }
+        }
         .name{
           color: white;
           background-color: rgb(43, 43, 128);
@@ -28,6 +35,7 @@
           width: 100%;
           height: 40px;
           font-size: 30px;
+          vertical-align: middle;
         }
       }
       &__submit{
