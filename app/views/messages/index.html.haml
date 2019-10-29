@@ -1,4 +1,4 @@
-= form_with model: [@group, @message] do |f|
+= form_with model: [@group, @message], local: true do |f|
   - current_user.groups.each do |group|
     .message
       .message-form__wrap
