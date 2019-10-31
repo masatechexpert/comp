@@ -11,7 +11,9 @@
       %h2 終了時間
       = l @event.end_date, format: :short
     .event-show__delete
-      = link_to "削除する", event_path(@event.id), method: :delete, class: "delete-btn"
+      = link_to "削除", event_path(@event.id), method: :delete, class: "delete-btn"
+    .event-show__edit
+      = link_to "編集", edit_event_path(@event.id), class: "edit-btn"
 
   .google-map
     #map{:style => "width: 80%; height: 400px;"}
